@@ -1,2 +1,2 @@
 # python_crypto_snippets
-Useful blocks of re-usable code
+Building up a repo of useful snippets of code for crypto. This is for toybox applications only.
