@@ -1,0 +1,30 @@
+import csv
+#to output a dictionary with single values for a given key to csv
+
+single_dict = {"Key value 1": 1, "Key value 2": 2}
+
+with open('single_dict.csv', 'w') as f:
+    w = csv.writer(f)
+    w.writerows(single_dict.items())
+
+#to output a dictionary with multiple values for a given key to csv
+
+#create dictionary
+keylist = [41, 42, 43, 44]
+multi_dict = dict((key, []) for key in keylist)
+for each in keylist:
+	multi_dict[each].append(each)
+
+#add some values to the dictionary
+#use this to append values at a given key
+multi_dict[VALUE].append(KEY)
+
+#this belongs in a loop or call on the fly - it will append values to keys as and when it finds them.
+
+for k,v in multi_dict.items():
+	f = csv.writer(open("multi_dict.csv", "w"))
+	for key, val in multi_dict.items():				
+		f.writerow([key, val])
+    
+#example output: A,"[u'A', 5, 20, 61, 108, 445, 955]"    
+#the output needs tweaking, it was never supposed to see the light of day.
